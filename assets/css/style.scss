@@ -1,0 +1,842 @@
+//Переменные
+$red: #F62230;
+$black: #2A2A2A;
+$blue: #002438;
+$bold: 700;
+$regular: 400;
+
+body{
+	font-family: 'Comfortaa', cursive;
+}
+main{
+    position: relative;
+    background: url(../img/home/bg.png) center center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+//Первая секция - Главная
+.burgerBodySettings {
+    overflow: hidden;
+}
+.burgerBtn {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+        span{
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            left: 5px;
+            transition: transform .5s, opacity .5s;
+            &:nth-child(1) {
+                transform: translateY(-10px); 
+            }
+            &:nth-child(3) {
+                transform: translateY(10px); 
+            }
+        }
+}
+.header.open .burgerBtn {
+    span {
+        &:nth-child(1) {
+        transform: translateY(0) rotate(45deg);
+        }
+        &:nth-child(2) {
+        opacity: 0;
+        }
+        &:nth-child(3) {
+        transform: translateY(0) rotate(-45deg);
+        }
+    }
+}
+.header{
+	padding-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	height: 90px;
+	align-items: center;
+}
+.logo{
+	width: 33.3%;
+	text-align: left;
+	img{
+		width: 202px;
+	}
+}
+.menu{
+	width: 33.3%;
+	ul{
+		display: flex;
+		justify-content: space-between;
+		text-align: center;
+		padding: 0;
+		margin-bottom: 0;
+		a{
+			color: white;
+			font-size: 18px;
+			font-weight: $regular;
+			font-family: Comfortaa, cursive;
+			line-height: 16px;
+			text-decoration: none;
+		}
+	}
+}
+.orderButton{
+	width: 33.3%;
+	text-align: right;
+	a{
+		text-decoration: none;
+		padding: 18px 20px;
+		color: white;
+		font-size: 18px;
+		font-family: Comfortaa, cursive;
+		font-weight: $bold;
+		line-height: 16px;
+		background-color: $red;
+		border: 1px solid $red;
+		transition: all .3s;
+		&:hover{
+			background-color: transparent;
+			color: $red;
+		}
+	}	
+}
+.descriptionHome{
+	margin-top: 190px;
+	h2{
+		color: $red;
+		font-size: 28px;
+		font-family: Comfortaa, cursive;
+		font-weight: $bold;
+		line-height: 40px;
+		margin-bottom: 20px;
+	}
+	h1{
+		color: white;
+		font-size: 43px;
+		font-family: Comfortaa, cursive;
+		font-weight: $bold;
+		line-height: 57.5px;
+		margin-bottom: 14px;
+	}
+	p{
+		color: white;
+		font-size: 23px;
+		font-family: Comfortaa, cursive;
+		line-height: 33px;
+		font-weight: $regular;
+		margin-bottom: 53px;
+	}
+	a{
+		text-decoration: none;
+		padding: 18px 20px;
+		color: white;
+		font-size: 18px;
+		font-family: Comfortaa, cursive;
+		font-weight: $bold;
+		line-height: 16px;
+		background-color: $red;
+		border: 1px solid $red;
+		transition: all .3s;
+		&:hover{
+			background-color: transparent;
+			color: $red;
+		}
+	}
+}
+//Секция 2 - О нас
+.about{
+	background: url(../img/about/bg.png) center center no-repeat;
+	background-size: cover;
+	padding-top: 120px;
+	padding-bottom: 270px;
+}
+.aboutHeader{
+	margin-top: 34px;
+	margin-bottom: 30px;
+	p{
+		color: $red;
+		text-align: center;
+		font-size: 36px;
+		font-family: Marck Script, cursive;
+		line-height: 16px;
+	}
+}
+.aboutInfo{
+	h1{
+		color: $black;
+		font-size: 43px;
+		font-family: Comfortaa, cursive;
+		line-height: 50px;
+	}
+	p{
+		margin-top: 20px;
+		color: $black;
+		font-size: 16px;
+		font-family: Comfortaa, cursive;
+		line-height: 27.5px;
+		margin-bottom: 40px;
+	}
+	a{
+		text-decoration: none;
+		padding: 18px 20px;
+		color: white;
+		font-size: 18px;
+		font-family: Comfortaa, cursive;
+		font-weight: $bold;
+		line-height: 16px;
+		background-color: $red;
+		border: 1px solid $red;
+		transition: all .3s;
+		&:hover{
+			background-color: transparent;
+			color: $red;
+		}
+	}
+}
+.aboutImg{
+	img{
+		width: 100%;
+	}
+}
+//Секция 3 - Услуги
+.services{
+	margin-top: -150px;
+	padding-bottom: 22px;
+}
+.servicesHeader{
+	margin-bottom: 45px;
+	p{
+		color: $red;
+		text-align: center;
+		font-size: 36px;
+		font-family: Marck Script, cursive;
+		line-height: 16px;
+	}
+	h1{
+		margin-top: 30px;
+		color: $black;
+		text-align: center;
+		font-size: 43px;
+		font-family: Comfortaa, cursive;
+		font-weight: $bold;
+		line-height: 57.5px;
+	}
+}
+.servicesCard{
+	background: white;
+	box-shadow: 7px 10px 31px 0px rgba(0, 0, 0, 0.25);
+	padding-bottom: 60px;
+	margin-bottom: 50px;
+}
+.servicesCardImg{
+	img{
+		width: 100%;
+	}
+}
+.servicesCardInfo{
+	text-align: center;
+	position: relative;
+	h1{
+		margin-top: 25px;
+		margin-bottom: 15px;
+		color: $black;
+		font-size: 27px;
+		font-family: Comfortaa, cursive;
+		font-weight: $bold;
+		line-height: 40px;
+	}
+	p{
+		width: 90%;
+		margin: 0 auto;
+		color: $black;
+		font-size: 16px;
+		font-family: Comfortaa, cursive;
+		line-height: 21.5px;
+		margin-bottom: 50px;
+	}
+	a{
+		text-decoration: none;
+		padding: 18px 20px;
+		color: white;
+		font-size: 18px;
+		font-family: Comfortaa, cursive;
+		font-weight: $bold;
+		line-height: 16px;
+		background-color: $red;
+		border: 1px solid $red;
+		transition: all .3s;
+		&:hover{
+			background-color: transparent;
+			color: $red;
+		}
+	}
+}
+//Секция 4 - Скидка
+.discount{
+	background: url(../img/discount/bg.png) center center no-repeat;
+	background-size: cover;
+	padding-bottom: 160px;
+}
+.discountInfo{
+	margin-top: 150px;
+	h1{
+		color: white;
+		font-size: 40px;
+		font-family: Comfortaa, cursive;
+		font-weight: $bold;
+		line-height: 57.5px;
+	}
+	p{
+		color: white;
+		font-size: 22px;
+		font-family: Comfortaa, cursive;
+		line-height: 33px;
+	}
+	button{
+			margin-top: 20px;
+			padding: 18px 20px;
+			color: white;
+			font-size: 18px;
+			font-family: Comfortaa, cursive;
+			font-weight: $bold;
+			line-height: 16px;
+			background-color: $red;
+			border: 1px solid $red;
+			transition: all .3s;
+			&:hover{
+				background-color: transparent;
+				color: $red;
+			}
+	}
+}
+//Секция 5 - Преимущества
+.advantages{
+	background: url(../img/advantages/bg.png) center center no-repeat;
+	background-size: cover;
+	padding-bottom: 66px;
+} 
+.advantagesHeader{
+	margin-top: 100px;
+	h2{
+		color: $red;
+		text-align: center;
+		font-size: 36px;
+		font-family: Marck Script, cursive;
+		line-height: 16px;
+	}
+	h1{
+		margin-top: 40px;
+		margin-bottom: 40px;
+		color: $black;
+		font-size: 43px;
+		font-family: Comfortaa, cursive;
+		font-weight: $bold;
+		line-height: 57.5px;
+	}
+}
+.advantagesItem{
+	img{
+		margin-top: -10px;
+	}
+	h1{
+		padding-left: 5px;
+		display: inline-block;
+		margin-bottom: 0;
+		color: $black;
+		font-size: 22px;
+		font-family: Comfortaa, cursive;
+		font-weight: $bold;
+		line-height: 57.5px;
+	}
+	p{
+		padding-left: 45px;
+		color: $black;
+		font-size: 16px;
+		font-family: Comfortaa, cursive;
+		line-height: 24px;
+	}
+}
+.advantagesImg{
+	text-align: right;
+	margin-top: 80px;
+	img{
+		height: 467px;
+	}
+	img:nth-child(1){
+		padding-right: 50px;
+	}
+}
+//Секция 6 - Отзывы
+.reviews{
+	padding-top: 66px;
+	padding-bottom: 140px;
+}
+.reviewsHeader{
+	margin-bottom: 60px;
+	h2{
+		color: $red;
+		text-align: center;
+		font-size: 36px;
+		font-family: Marck Script, cursive;
+		line-height: 16px;
+	}
+	h1{
+		margin-top: 32px;
+		color: $black;
+		text-align: center;
+		font-size: 43px;
+		font-family: Comfortaa, cursive;
+		font-weight: $bold;
+		line-height: 57.5px;
+	}
+}
+.reviewsCard{
+	text-align: center;
+	padding-top: 14px;
+	padding-bottom: 50px;
+	background: white;
+	box-shadow: 7px 10px 31px 0px rgba(0, 0, 0, 0.25);
+	p{
+		width: 85%;
+		margin: 28px auto 8px auto;
+		text-align: left;
+	}
+	ul{
+		padding-left: 0;
+		li{
+			list-style-type: none;
+			display: inline-block;
+		}
+	}
+}
+.client{
+	margin-top: -50px;
+	text-align: center;
+	h1{
+		color: $black;
+		font-size: 22px;
+		font-family: Comfortaa, cursive;
+		line-height: 24px;
+	}
+	h2{
+		color: #6A6A6A;
+		font-size: 16px;
+		font-family: Comfortaa, cursive;
+		line-height: 24px;
+	}
+}
+//Секция - Футер
+.footer{
+	background: url(../img/footer/bg.png) center center no-repeat;
+	background-size: cover;
+	padding-top: 90px;
+	padding-bottom: 100px;
+}
+.contactsFooter, .openingHours{
+	h1{
+		color: white;
+		font-size: 28px;
+		font-family: Comfortaa, cursive;
+		font-weight: $bold;
+		line-height: 57.5px;
+	}
+}
+.placeContactsFooter, .openingHoursItem{
+	margin-bottom: 15px;
+	img{
+		height: 22px;
+		width: 22px;
+	}
+	p{
+		display: inline-block;
+		margin-bottom: 0;
+		color: white;
+		font-size: 16px;
+		font-family: Comfortaa, cursive;
+		line-height: 24px;
+	}
+}
+.emailContactsFooter, .phoneContactsFooter{
+	margin-bottom: 15px;
+	img{
+		height: 22px;
+		width: 22px;
+	}
+	a{
+		display: inline-block;
+		color: white;
+		font-size: 16px;
+		font-family: Comfortaa, cursive;
+		line-height: 24px;
+		text-decoration: none;
+	}
+}
+.footerBlock{
+	margin-top: -200px;
+	width: 130%;
+	text-align: center;
+	background-color: $red;
+	padding-top: 33px;
+	padding-bottom: 60px;
+	img{
+		width: 207px;
+		height: 46px;
+	}
+	p{
+		margin-top: 48px;
+		margin-bottom: 25px;
+		color: white;
+		text-align: center;
+		font-size: 16px;
+		font-family: Comfortaa, cursive;
+		line-height: 24px;
+	}
+	.footerblockLine{
+		background-color: white;
+		height: 1px;
+		width: 95px;
+		display: inline-block;
+		margin-bottom: 35px;
+	}
+	.footerBlockSocial{
+		width: 40%;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		img:nth-child(1){
+			width: 24px;
+			height: 24px;
+		}
+		img:nth-child(2){
+			width: 22px;
+			height: 24px;
+		}
+		img:nth-child(3){
+			width: 22px;
+			height: 24px;
+		}
+	}
+}
+
+
+
+
+//media
+@media (max-width: 1399.5px){
+	.aboutInfo{
+		h1{
+			font-size: 35px;
+			line-height: 45px;
+		}
+	}
+	//Секция 3 - Уcлуги
+	.servicesCardInfo{
+		h1{
+			color: $black;
+			font-size: 25px;
+			font-family: Comfortaa, cursive;
+			font-weight: $bold;
+			line-height: 35px;
+		}
+	}
+	//Секция 5 - Преимущества
+	.advantagesHeader{
+		h2{
+			font-size: 36px;
+			line-height: 16px;
+		}
+		h1{
+			font-size: 35px;
+			line-height: 45px;
+		}
+	}
+	.advantagesItem{
+		h1{
+			font-size: 18px;
+			line-height: 45px;
+		}
+		p{
+			font-size: 14px;
+		}
+	}
+	.advantagesImg{
+		img{
+			height: 400px;
+		}
+	}
+	//Секция - Футер
+	.footerBlock{
+		p{
+			width: 90%;
+			margin: 48px auto 25px auto;
+		}
+	}
+}
+
+@media (max-width: 1199.5px){
+	.logo{
+		width: 30%;
+	}
+	.menu{
+		width: 40%;
+	}
+	.orderButton{
+		width: 30%;
+	}
+	//Секция 5 - Преимущества
+	.advantagesImg{
+		display: none;
+	}
+}
+
+@media (max-width: 991.5px) {
+    .burgerBtn {
+    	width: 33.3%;
+        display: inline-block;
+        z-index: 11;
+    }
+    .menu {
+    	width: 33.3%;
+        margin: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: -100%;
+        background-color: #2a2a2a;
+        padding: 75px 20px 20px 20px;
+        transition: transform .5s;
+        z-index: 10;
+        ul {
+        	display: block;
+        	margin-top: 30px;
+            a{
+              display: block;
+              font-size: 21px;
+              padding: 25px 38px;  
+            }
+        }
+    }
+    .header.open .menu {
+        transform: translateX(100%);
+    }
+    .orderButton{
+    	width: 33.3%;
+    	a{
+    		padding: 12px 15px;
+    		font-size: 12px;
+    		line-height: 13px;
+    	}
+    }
+    //2 секция - О нас
+    .about{
+    	padding-bottom: 230px;
+    }
+    .aboutHeader{
+    	margin-top: 0px;
+    	margin-bottom: 20px;
+    }
+    .aboutInfo{
+    	h1{
+    		font-size: 25px;
+    		line-height: 32px;
+    	}
+    	p{
+    		margin-top: 10px;
+    		font-size: 14px;
+    		line-height: 20px;
+    	}
+    }
+    .aboutImg{
+    	img{
+    		width: 100%;
+    	}
+    }
+    //Секция 3 - Услуги
+    .servicesHeader{
+    	margin-bottom: 45px;
+    	h1{
+    		margin-top: 30px;
+    		font-size: 30px;
+    		line-height: 57.5px;
+    	}
+    }
+    //Секция 5 - Преимущества
+    .advantages{
+    	background: none;
+    }
+    .advantagesHeader{
+    	h1{
+    		text-align: center;
+    	}
+    }
+    //Секция 6 - Отзывы
+    .reviewsHeader{
+    	h1{
+    		font-size: 30px;
+    		line-height: 57.5px;
+    	}
+    }
+    .client{
+    	margin-bottom: 50px;
+    }
+    //Секция - Футер
+    .contactsFooter{
+    	margin-top: 120px;
+    }
+    .openingHours{
+    	margin-top: 120px;
+    }
+    .footerBlock{
+    	margin-top: -550px;
+    }
+}
+
+@media (max-width: 767.5px){
+	.logo{
+		width: 35%;
+		img{
+			width: 100%;
+		}
+	}
+	.burgerBtn {
+		width: 25%;
+	}
+	.orderButton{
+		width: 40%;
+	}
+	.descriptionHome{
+		margin-top: 130px;
+		h2{
+			font-size: 28px;
+			line-height: 35px;
+			margin-bottom: 20px;
+		}
+		h1{
+			font-size: 35px;
+			line-height: 45px;
+			margin-bottom: 14px;
+		}
+		p{
+			font-size: 18px;
+			line-height: 30px;
+			margin-bottom: 50px;
+		}
+	}
+//2 секция - О нас
+	.about{
+		padding-top: 70px;
+		padding-bottom: 230px;
+	}
+	.aboutInfo{
+		h1{
+			font-size: 25px;
+			line-height: 32px;
+		}
+		p{
+			margin-top: 15px;
+			margin-bottom: 15px;
+			font-size: 14px;
+			line-height: 20px;
+		}
+		a{
+			display: flex;
+			justify-content: center;
+			width: 200px;
+			margin: 30px auto 30px auto;
+		}
+	}
+	//Секция 3 - Услуги
+	.servicesHeader{
+		margin-bottom: 45px;
+		h1{
+			margin-top: 30px;
+			font-size: 25px;
+			line-height: 30px;
+		}
+	}
+	//Секция 6 - Отзывы
+	.reviewsHeader{
+		h1{
+			font-size: 25px;
+			line-height: 30px;
+		}
+	}
+	//Секция - Футер
+	.contactsFooter{
+		margin-top: 120px;
+	}
+	.openingHours{
+		margin-top: 0px;
+	}
+	.footerBlock{
+		margin-top: -700px;
+	}
+}
+
+@media (max-width: 575.5px){
+	.logo{
+		width: 35%;
+		img{
+			width: 100%;
+		}
+	}
+	.burgerBtn {
+		width: 25%;
+		span{
+			margin-left: 15px;
+		}
+	}
+	.orderButton{
+		width: 40%;
+		a{
+			padding: 12px 15px;
+			font-size: 12px;
+			line-height: 13px;
+			margin-right: 10px;
+		}
+	}
+	.footerBlock{
+		width: 90%;
+		margin: -700px auto 0 auto;
+	}
+}
+
+@media (max-width: 480px){
+	.orderButton{
+		width: 40%;
+		a{
+			padding: 8px 12px;
+			font-size: 10px;
+			line-height: 13px;
+			margin-right: 10px;
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.logo{
+		width: 45%;
+	}
+	.burgerBtn {
+		width: 15%;
+		span{
+			margin-left: 0;
+		}
+	}
+	.orderButton{
+		width: 35%;
+		a{
+			margin-right: 0;
+		}
+	}
+}

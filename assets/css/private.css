@@ -1,0 +1,720 @@
+body {
+  font-family: "Comfortaa", cursive;
+}
+
+.menuBg {
+  width: 100%;
+  height: 112px;
+  background-color: #002438;
+}
+
+.burgerBodySettings {
+  overflow: hidden;
+}
+
+.burgerBtn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+}
+.burgerBtn span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  left: 5px;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+.burgerBtn span:nth-child(1) {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+.burgerBtn span:nth-child(3) {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.header.open .burgerBtn span:nth-child(1) {
+  -webkit-transform: translateY(0) rotate(45deg);
+          transform: translateY(0) rotate(45deg);
+}
+.header.open .burgerBtn span:nth-child(2) {
+  opacity: 0;
+}
+.header.open .burgerBtn span:nth-child(3) {
+  -webkit-transform: translateY(0) rotate(-45deg);
+          transform: translateY(0) rotate(-45deg);
+}
+
+.header {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 90px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  width: 33.3%;
+  text-align: left;
+}
+.logo img {
+  width: 202px;
+}
+
+.menu {
+  width: 33.3%;
+}
+.menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 0;
+}
+.menu ul a {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: Comfortaa, cursive;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.orderButton {
+  width: 33.3%;
+  text-align: right;
+}
+.orderButton a {
+  text-decoration: none;
+  padding: 18px 20px;
+  color: white;
+  font-size: 18px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 16px;
+  background-color: #F62230;
+  border: 1px solid #F62230;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.orderButton a:hover {
+  background-color: transparent;
+  color: #F62230;
+}
+
+.pageHeader {
+  background: url(../img/privatePage/bg.png) center center no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.pageHeader h1 {
+  padding: 100px 0 100px 0;
+  color: white;
+  font-family: Comfortaa, cursive;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 57.5px;
+}
+
+.pageHeaderBlock {
+  background-color: white;
+  -webkit-box-shadow: 7px 10px 31px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 7px 10px 31px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding: 33px 0 76px 0;
+  margin-top: -70px;
+}
+.pageHeaderBlock h1 {
+  margin-bottom: 13px;
+  color: #2A2A2A;
+  font-family: Comfortaa, cursive;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38.5px;
+}
+.pageHeaderBlock p {
+  width: 70%;
+  margin: 0 auto 60px auto;
+  color: #2A2A2A;
+  text-align: center;
+  font-family: Comfortaa, cursive;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21.5px;
+}
+.pageHeaderBlock a {
+  text-decoration: none;
+  padding: 23px 9px;
+  color: white;
+  font-size: 18px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 16px;
+  background-color: #F62230;
+  border: 1px solid #F62230;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.pageHeaderBlock a:hover {
+  background-color: transparent;
+  color: #F62230;
+}
+
+.pageHeaderDescription {
+  margin-top: 57px;
+}
+.pageHeaderDescription p {
+  color: #2A2A2A;
+  font-family: Comfortaa, cursive;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px;
+}
+
+.servicesListHeader {
+  text-align: center;
+  margin-top: 50px;
+}
+.servicesListHeader p {
+  color: #F62230;
+  text-align: center;
+  font-family: Marck Script, cursive;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+}
+.servicesListHeader h1 {
+  color: #2A2A2A;
+  font-family: Comfortaa, cursive;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 57.5px;
+}
+
+.servicesListBlock {
+  margin-top: 50px;
+  background: white;
+  -webkit-box-shadow: 7px 10px 31px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 7px 10px 31px 0px rgba(0, 0, 0, 0.25);
+  padding: 100px 80px 50px 80px;
+}
+
+.servicesListBlockItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+.servicesListBlockItem img {
+  height: 30px;
+  width: 30px;
+}
+.servicesListBlockItem p {
+  margin-left: 10px;
+  margin-bottom: 0;
+  display: inline-block;
+  color: #2A2A2A;
+  font-family: Comfortaa, cursive;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px;
+}
+
+.pageMenu {
+  margin-top: 80px;
+}
+
+.pageMenuHeader {
+  text-align: center;
+}
+.pageMenuHeader p {
+  color: #F62230;
+  font-family: Marck Script, cursive;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  margin-bottom: 16px;
+}
+.pageMenuHeader h1 {
+  color: #2A2A2A;
+  font-family: Comfortaa, cursive;
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 57.5px;
+}
+
+.options {
+  margin-top: 10px;
+}
+
+.option {
+  margin-bottom: 30px;
+}
+.option a {
+  cursor: pointer;
+  color: #2A2A2A;
+  font-family: Comfortaa, cursive;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px;
+  text-decoration: none;
+  text-underline-offset: 7px;
+}
+
+.active {
+  text-decoration: underline !important;
+  text-decoration-color: red !important;
+}
+
+.weight {
+  text-align: right;
+}
+
+.standartPlus, .business {
+  display: none;
+  width: 100%;
+}
+
+.standart {
+  width: 100%;
+}
+
+.pageMenuList table {
+  width: 100%;
+}
+.pageMenuList table td {
+  padding: 10px 0;
+}
+.pageMenuList table th:first-child,
+.pageMenuList table td:first-child {
+  width: 80%;
+}
+.pageMenuList table th:last-child,
+.pageMenuList table td:last-child {
+  width: 20%;
+}
+.pageMenuList table strong {
+  color: #2A2A2A;
+  text-align: center;
+  font-family: Comfortaa, cursive;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 33px;
+}
+
+.totalPrice {
+  margin-top: 50px;
+  text-align: right;
+  padding-bottom: 200px;
+}
+.totalPrice h1 {
+  margin-right: 60px;
+  display: inline-block;
+  color: #2A2A2A;
+  font-family: Comfortaa, cursive;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33px;
+}
+.totalPrice a {
+  text-decoration: none;
+  padding: 18px 20px;
+  color: white !important;
+  font-size: 18px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 16px;
+  background-color: #F62230;
+  border: 1px solid #F62230;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.totalPrice a:hover {
+  background-color: transparent;
+  color: #F62230 !important;
+}
+
+.footer {
+  background: url(../img/footer/bg.png) center center no-repeat;
+  background-size: cover;
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+
+.contactsFooter h1, .openingHours h1 {
+  color: white;
+  font-size: 28px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 57.5px;
+}
+
+.placeContactsFooter, .openingHoursItem {
+  margin-bottom: 15px;
+}
+.placeContactsFooter img, .openingHoursItem img {
+  height: 22px;
+  width: 22px;
+}
+.placeContactsFooter p, .openingHoursItem p {
+  display: inline-block;
+  margin-bottom: 0;
+  color: white;
+  font-size: 16px;
+  font-family: Comfortaa, cursive;
+  line-height: 24px;
+}
+
+.emailContactsFooter, .phoneContactsFooter {
+  margin-bottom: 15px;
+}
+.emailContactsFooter img, .phoneContactsFooter img {
+  height: 22px;
+  width: 22px;
+}
+.emailContactsFooter a, .phoneContactsFooter a {
+  display: inline-block;
+  color: white;
+  font-size: 16px;
+  font-family: Comfortaa, cursive;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.footerBlock {
+  margin-top: -200px;
+  width: 130%;
+  text-align: center;
+  background-color: #F62230;
+  padding-top: 33px;
+  padding-bottom: 60px;
+}
+.footerBlock img {
+  width: 207px;
+  height: 46px;
+}
+.footerBlock p {
+  margin-top: 48px;
+  margin-bottom: 25px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-family: Comfortaa, cursive;
+  line-height: 24px;
+}
+.footerBlock .footerblockLine {
+  background-color: white;
+  height: 1px;
+  width: 95px;
+  display: inline-block;
+  margin-bottom: 35px;
+}
+.footerBlock .footerBlockSocial {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+.footerBlock .footerBlockSocial img:nth-child(1) {
+  width: 24px;
+  height: 24px;
+}
+.footerBlock .footerBlockSocial img:nth-child(2) {
+  width: 22px;
+  height: 24px;
+}
+.footerBlock .footerBlockSocial img:nth-child(3) {
+  width: 22px;
+  height: 24px;
+}
+
+.thankYou {
+  text-align: center;
+  padding: 100px 0 200px 0;
+}
+.thankYou img {
+  width: 200px;
+}
+.thankYou h1 {
+  margin-top: 50px;
+  color: #2A2A2A;
+  font-family: Lora, serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  margin-bottom: 60px;
+}
+.thankYou a {
+  text-decoration: none;
+  padding: 18px 20px;
+  color: white;
+  font-size: 18px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 16px;
+  background-color: #F62230;
+  border: 1px solid #F62230;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.thankYou a:hover {
+  background-color: transparent;
+  color: #F62230;
+}
+
+@media (max-width: 1399.5px) {
+  .servicesListBlockItem p {
+    font-size: 20px;
+  }
+  .footerBlock p {
+    width: 90%;
+    margin: 48px auto 25px auto;
+  }
+}
+@media (max-width: 1199.5px) {
+  .logo {
+    width: 30%;
+  }
+  .menu {
+    width: 40%;
+  }
+  .orderButton {
+    width: 30%;
+  }
+  .pageMenuHeader {
+    margin-bottom: 40px;
+  }
+  .options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .totalPrice {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 991.5px) {
+  .burgerBtn {
+    width: 33.3%;
+    display: inline-block;
+    z-index: 11;
+  }
+  .menu {
+    width: 33.3%;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background-color: #2a2a2a;
+    padding: 75px 20px 20px 20px;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    z-index: 10;
+  }
+  .menu ul {
+    display: block;
+    margin-top: 30px;
+  }
+  .menu ul a {
+    display: block;
+    font-size: 21px;
+    padding: 25px 38px;
+  }
+  .header.open .menu {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  .orderButton {
+    width: 33.3%;
+  }
+  .orderButton a {
+    padding: 12px 15px;
+    font-size: 12px;
+    line-height: 13px;
+  }
+  .servicesListHeader h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .pageMenuHeader h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .pageMenuHeader p {
+    margin-bottom: 16px;
+  }
+  .totalPrice {
+    padding-bottom: 250px;
+  }
+  .totalPrice h1 {
+    margin-right: 30px;
+    font-size: 22px;
+  }
+  .contactsFooter {
+    margin-top: 120px;
+  }
+  .openingHours {
+    margin-top: 120px;
+  }
+  .footerBlock {
+    margin-top: -550px;
+  }
+  .thankYou {
+    padding: 100px 0 300px 0;
+  }
+}
+@media (max-width: 767.5px) {
+  .logo {
+    width: 35%;
+  }
+  .logo img {
+    width: 100%;
+  }
+  .burgerBtn {
+    width: 25%;
+  }
+  .orderButton {
+    width: 40%;
+  }
+  .servicesListBlock {
+    padding: 60px 50px 10px 50px;
+  }
+  .contactsFooter {
+    margin-top: 120px;
+  }
+  .openingHours {
+    margin-top: 0px;
+  }
+  .footerBlock {
+    margin-top: -700px;
+  }
+}
+@media (max-width: 575.5px) {
+  .logo {
+    width: 35%;
+  }
+  .logo img {
+    width: 100%;
+  }
+  .burgerBtn {
+    width: 25%;
+  }
+  .burgerBtn span {
+    margin-left: 15px;
+  }
+  .orderButton {
+    width: 40%;
+  }
+  .orderButton a {
+    padding: 12px 15px;
+    font-size: 12px;
+    line-height: 13px;
+    margin-right: 10px;
+  }
+  .options {
+    display: block;
+  }
+  .totalPrice h1 {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .footerBlock {
+    width: 90%;
+    margin: -700px auto 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  .orderButton {
+    width: 40%;
+  }
+  .orderButton a {
+    padding: 8px 12px;
+    font-size: 10px;
+    line-height: 13px;
+    margin-right: 10px;
+  }
+  .servicesListHeader h1 {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .pageMenuHeader h1 {
+    font-size: 25px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 400px) {
+  .logo {
+    width: 45%;
+  }
+  .burgerBtn {
+    width: 15%;
+  }
+  .burgerBtn span {
+    margin-left: 0;
+  }
+  .orderButton {
+    width: 35%;
+  }
+  .orderButton a {
+    margin-right: 0;
+  }
+}
+@media (max-width: 349.5px) {
+  .servicesListBlock {
+    padding: 60px 20px 10px 20px;
+  }
+  .servicesListBlockItem p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .totalPrice h1 {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,835 @@
+body {
+  font-family: "Comfortaa", cursive;
+}
+
+main {
+  position: relative;
+  background: url(../img/home/bg.png) center center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+.burgerBodySettings {
+  overflow: hidden;
+}
+
+.burgerBtn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+}
+.burgerBtn span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  left: 5px;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+.burgerBtn span:nth-child(1) {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+.burgerBtn span:nth-child(3) {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.header.open .burgerBtn span:nth-child(1) {
+  -webkit-transform: translateY(0) rotate(45deg);
+          transform: translateY(0) rotate(45deg);
+}
+.header.open .burgerBtn span:nth-child(2) {
+  opacity: 0;
+}
+.header.open .burgerBtn span:nth-child(3) {
+  -webkit-transform: translateY(0) rotate(-45deg);
+          transform: translateY(0) rotate(-45deg);
+}
+
+.header {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 90px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  width: 33.3%;
+  text-align: left;
+}
+.logo img {
+  width: 202px;
+}
+
+.menu {
+  width: 33.3%;
+}
+.menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 0;
+}
+.menu ul a {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: Comfortaa, cursive;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.orderButton {
+  width: 33.3%;
+  text-align: right;
+}
+.orderButton a {
+  text-decoration: none;
+  padding: 18px 20px;
+  color: white;
+  font-size: 18px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 16px;
+  background-color: #F62230;
+  border: 1px solid #F62230;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.orderButton a:hover {
+  background-color: transparent;
+  color: #F62230;
+}
+
+.descriptionHome {
+  margin-top: 190px;
+}
+.descriptionHome h2 {
+  color: #F62230;
+  font-size: 28px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+.descriptionHome h1 {
+  color: white;
+  font-size: 43px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 57.5px;
+  margin-bottom: 14px;
+}
+.descriptionHome p {
+  color: white;
+  font-size: 23px;
+  font-family: Comfortaa, cursive;
+  line-height: 33px;
+  font-weight: 400;
+  margin-bottom: 53px;
+}
+.descriptionHome a {
+  text-decoration: none;
+  padding: 18px 20px;
+  color: white;
+  font-size: 18px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 16px;
+  background-color: #F62230;
+  border: 1px solid #F62230;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.descriptionHome a:hover {
+  background-color: transparent;
+  color: #F62230;
+}
+
+.about {
+  background: url(../img/about/bg.png) center center no-repeat;
+  background-size: cover;
+  padding-top: 120px;
+  padding-bottom: 270px;
+}
+
+.aboutHeader {
+  margin-top: 34px;
+  margin-bottom: 30px;
+}
+.aboutHeader p {
+  color: #F62230;
+  text-align: center;
+  font-size: 36px;
+  font-family: Marck Script, cursive;
+  line-height: 16px;
+}
+
+.aboutInfo h1 {
+  color: #2A2A2A;
+  font-size: 43px;
+  font-family: Comfortaa, cursive;
+  line-height: 50px;
+}
+.aboutInfo p {
+  margin-top: 20px;
+  color: #2A2A2A;
+  font-size: 16px;
+  font-family: Comfortaa, cursive;
+  line-height: 27.5px;
+  margin-bottom: 40px;
+}
+.aboutInfo a {
+  text-decoration: none;
+  padding: 18px 20px;
+  color: white;
+  font-size: 18px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 16px;
+  background-color: #F62230;
+  border: 1px solid #F62230;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.aboutInfo a:hover {
+  background-color: transparent;
+  color: #F62230;
+}
+
+.aboutImg img {
+  width: 100%;
+}
+
+.services {
+  margin-top: -150px;
+  padding-bottom: 22px;
+}
+
+.servicesHeader {
+  margin-bottom: 45px;
+}
+.servicesHeader p {
+  color: #F62230;
+  text-align: center;
+  font-size: 36px;
+  font-family: Marck Script, cursive;
+  line-height: 16px;
+}
+.servicesHeader h1 {
+  margin-top: 30px;
+  color: #2A2A2A;
+  text-align: center;
+  font-size: 43px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 57.5px;
+}
+
+.servicesCard {
+  background: white;
+  -webkit-box-shadow: 7px 10px 31px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 7px 10px 31px 0px rgba(0, 0, 0, 0.25);
+  padding-bottom: 60px;
+  margin-bottom: 50px;
+}
+
+.servicesCardImg img {
+  width: 100%;
+}
+
+.servicesCardInfo {
+  text-align: center;
+  position: relative;
+}
+.servicesCardInfo h1 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: #2A2A2A;
+  font-size: 27px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 40px;
+}
+.servicesCardInfo p {
+  width: 90%;
+  margin: 0 auto;
+  color: #2A2A2A;
+  font-size: 16px;
+  font-family: Comfortaa, cursive;
+  line-height: 21.5px;
+  margin-bottom: 50px;
+}
+.servicesCardInfo a {
+  text-decoration: none;
+  padding: 18px 20px;
+  color: white;
+  font-size: 18px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 16px;
+  background-color: #F62230;
+  border: 1px solid #F62230;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.servicesCardInfo a:hover {
+  background-color: transparent;
+  color: #F62230;
+}
+
+.discount {
+  background: url(../img/discount/bg.png) center center no-repeat;
+  background-size: cover;
+  padding-bottom: 160px;
+}
+
+.discountInfo {
+  margin-top: 150px;
+}
+.discountInfo h1 {
+  color: white;
+  font-size: 40px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 57.5px;
+}
+.discountInfo p {
+  color: white;
+  font-size: 22px;
+  font-family: Comfortaa, cursive;
+  line-height: 33px;
+}
+.discountInfo button {
+  margin-top: 20px;
+  padding: 18px 20px;
+  color: white;
+  font-size: 18px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 16px;
+  background-color: #F62230;
+  border: 1px solid #F62230;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.discountInfo button:hover {
+  background-color: transparent;
+  color: #F62230;
+}
+
+.advantages {
+  background: url(../img/advantages/bg.png) center center no-repeat;
+  background-size: cover;
+  padding-bottom: 66px;
+}
+
+.advantagesHeader {
+  margin-top: 100px;
+}
+.advantagesHeader h2 {
+  color: #F62230;
+  text-align: center;
+  font-size: 36px;
+  font-family: Marck Script, cursive;
+  line-height: 16px;
+}
+.advantagesHeader h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #2A2A2A;
+  font-size: 43px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 57.5px;
+}
+
+.advantagesItem img {
+  margin-top: -10px;
+}
+.advantagesItem h1 {
+  padding-left: 5px;
+  display: inline-block;
+  margin-bottom: 0;
+  color: #2A2A2A;
+  font-size: 22px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 57.5px;
+}
+.advantagesItem p {
+  padding-left: 45px;
+  color: #2A2A2A;
+  font-size: 16px;
+  font-family: Comfortaa, cursive;
+  line-height: 24px;
+}
+
+.advantagesImg {
+  text-align: right;
+  margin-top: 80px;
+}
+.advantagesImg img {
+  height: 467px;
+}
+.advantagesImg img:nth-child(1) {
+  padding-right: 50px;
+}
+
+.reviews {
+  padding-top: 66px;
+  padding-bottom: 140px;
+}
+
+.reviewsHeader {
+  margin-bottom: 60px;
+}
+.reviewsHeader h2 {
+  color: #F62230;
+  text-align: center;
+  font-size: 36px;
+  font-family: Marck Script, cursive;
+  line-height: 16px;
+}
+.reviewsHeader h1 {
+  margin-top: 32px;
+  color: #2A2A2A;
+  text-align: center;
+  font-size: 43px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 57.5px;
+}
+
+.reviewsCard {
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 50px;
+  background: white;
+  -webkit-box-shadow: 7px 10px 31px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 7px 10px 31px 0px rgba(0, 0, 0, 0.25);
+}
+.reviewsCard p {
+  width: 85%;
+  margin: 28px auto 8px auto;
+  text-align: left;
+}
+.reviewsCard ul {
+  padding-left: 0;
+}
+.reviewsCard ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.client {
+  margin-top: -50px;
+  text-align: center;
+}
+.client h1 {
+  color: #2A2A2A;
+  font-size: 22px;
+  font-family: Comfortaa, cursive;
+  line-height: 24px;
+}
+.client h2 {
+  color: #6A6A6A;
+  font-size: 16px;
+  font-family: Comfortaa, cursive;
+  line-height: 24px;
+}
+
+.footer {
+  background: url(../img/footer/bg.png) center center no-repeat;
+  background-size: cover;
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+
+.contactsFooter h1, .openingHours h1 {
+  color: white;
+  font-size: 28px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 57.5px;
+}
+
+.placeContactsFooter, .openingHoursItem {
+  margin-bottom: 15px;
+}
+.placeContactsFooter img, .openingHoursItem img {
+  height: 22px;
+  width: 22px;
+}
+.placeContactsFooter p, .openingHoursItem p {
+  display: inline-block;
+  margin-bottom: 0;
+  color: white;
+  font-size: 16px;
+  font-family: Comfortaa, cursive;
+  line-height: 24px;
+}
+
+.emailContactsFooter, .phoneContactsFooter {
+  margin-bottom: 15px;
+}
+.emailContactsFooter img, .phoneContactsFooter img {
+  height: 22px;
+  width: 22px;
+}
+.emailContactsFooter a, .phoneContactsFooter a {
+  display: inline-block;
+  color: white;
+  font-size: 16px;
+  font-family: Comfortaa, cursive;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.footerBlock {
+  margin-top: -200px;
+  width: 130%;
+  text-align: center;
+  background-color: #F62230;
+  padding-top: 33px;
+  padding-bottom: 60px;
+}
+.footerBlock img {
+  width: 207px;
+  height: 46px;
+}
+.footerBlock p {
+  margin-top: 48px;
+  margin-bottom: 25px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-family: Comfortaa, cursive;
+  line-height: 24px;
+}
+.footerBlock .footerblockLine {
+  background-color: white;
+  height: 1px;
+  width: 95px;
+  display: inline-block;
+  margin-bottom: 35px;
+}
+.footerBlock .footerBlockSocial {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+.footerBlock .footerBlockSocial img:nth-child(1) {
+  width: 24px;
+  height: 24px;
+}
+.footerBlock .footerBlockSocial img:nth-child(2) {
+  width: 22px;
+  height: 24px;
+}
+.footerBlock .footerBlockSocial img:nth-child(3) {
+  width: 22px;
+  height: 24px;
+}
+
+@media (max-width: 1399.5px) {
+  .aboutInfo h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .servicesCardInfo h1 {
+    color: #2A2A2A;
+    font-size: 25px;
+    font-family: Comfortaa, cursive;
+    font-weight: 700;
+    line-height: 35px;
+  }
+  .advantagesHeader h2 {
+    font-size: 36px;
+    line-height: 16px;
+  }
+  .advantagesHeader h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .advantagesItem h1 {
+    font-size: 18px;
+    line-height: 45px;
+  }
+  .advantagesItem p {
+    font-size: 14px;
+  }
+  .advantagesImg img {
+    height: 400px;
+  }
+  .footerBlock p {
+    width: 90%;
+    margin: 48px auto 25px auto;
+  }
+}
+@media (max-width: 1199.5px) {
+  .logo {
+    width: 30%;
+  }
+  .menu {
+    width: 40%;
+  }
+  .orderButton {
+    width: 30%;
+  }
+  .advantagesImg {
+    display: none;
+  }
+}
+@media (max-width: 991.5px) {
+  .burgerBtn {
+    width: 33.3%;
+    display: inline-block;
+    z-index: 11;
+  }
+  .menu {
+    width: 33.3%;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background-color: #2a2a2a;
+    padding: 75px 20px 20px 20px;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    z-index: 10;
+  }
+  .menu ul {
+    display: block;
+    margin-top: 30px;
+  }
+  .menu ul a {
+    display: block;
+    font-size: 21px;
+    padding: 25px 38px;
+  }
+  .header.open .menu {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  .orderButton {
+    width: 33.3%;
+  }
+  .orderButton a {
+    padding: 12px 15px;
+    font-size: 12px;
+    line-height: 13px;
+  }
+  .about {
+    padding-bottom: 230px;
+  }
+  .aboutHeader {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  .aboutInfo h1 {
+    font-size: 25px;
+    line-height: 32px;
+  }
+  .aboutInfo p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .aboutImg img {
+    width: 100%;
+  }
+  .servicesHeader {
+    margin-bottom: 45px;
+  }
+  .servicesHeader h1 {
+    margin-top: 30px;
+    font-size: 30px;
+    line-height: 57.5px;
+  }
+  .advantages {
+    background: none;
+  }
+  .advantagesHeader h1 {
+    text-align: center;
+  }
+  .reviewsHeader h1 {
+    font-size: 30px;
+    line-height: 57.5px;
+  }
+  .client {
+    margin-bottom: 50px;
+  }
+  .contactsFooter {
+    margin-top: 120px;
+  }
+  .openingHours {
+    margin-top: 120px;
+  }
+  .footerBlock {
+    margin-top: -550px;
+  }
+}
+@media (max-width: 767.5px) {
+  .logo {
+    width: 35%;
+  }
+  .logo img {
+    width: 100%;
+  }
+  .burgerBtn {
+    width: 25%;
+  }
+  .orderButton {
+    width: 40%;
+  }
+  .descriptionHome {
+    margin-top: 130px;
+  }
+  .descriptionHome h2 {
+    font-size: 28px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+  .descriptionHome h1 {
+    font-size: 35px;
+    line-height: 45px;
+    margin-bottom: 14px;
+  }
+  .descriptionHome p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 50px;
+  }
+  .about {
+    padding-top: 70px;
+    padding-bottom: 230px;
+  }
+  .aboutInfo h1 {
+    font-size: 25px;
+    line-height: 32px;
+  }
+  .aboutInfo p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .aboutInfo a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 200px;
+    margin: 30px auto 30px auto;
+  }
+  .servicesHeader {
+    margin-bottom: 45px;
+  }
+  .servicesHeader h1 {
+    margin-top: 30px;
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .reviewsHeader h1 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .contactsFooter {
+    margin-top: 120px;
+  }
+  .openingHours {
+    margin-top: 0px;
+  }
+  .footerBlock {
+    margin-top: -700px;
+  }
+}
+@media (max-width: 575.5px) {
+  .logo {
+    width: 35%;
+  }
+  .logo img {
+    width: 100%;
+  }
+  .burgerBtn {
+    width: 25%;
+  }
+  .burgerBtn span {
+    margin-left: 15px;
+  }
+  .orderButton {
+    width: 40%;
+  }
+  .orderButton a {
+    padding: 12px 15px;
+    font-size: 12px;
+    line-height: 13px;
+    margin-right: 10px;
+  }
+  .footerBlock {
+    width: 90%;
+    margin: -700px auto 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  .orderButton {
+    width: 40%;
+  }
+  .orderButton a {
+    padding: 8px 12px;
+    font-size: 10px;
+    line-height: 13px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .logo {
+    width: 45%;
+  }
+  .burgerBtn {
+    width: 15%;
+  }
+  .burgerBtn span {
+    margin-left: 0;
+  }
+  .orderButton {
+    width: 35%;
+  }
+  .orderButton a {
+    margin-right: 0;
+  }
+}

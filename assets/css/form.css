@@ -1,0 +1,533 @@
+body {
+  font-family: "Comfortaa", cursive;
+}
+
+.menuBg {
+  width: 100%;
+  height: 112px;
+  background-color: #002438;
+}
+
+.burgerBodySettings {
+  overflow: hidden;
+}
+
+.burgerBtn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+}
+.burgerBtn span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  left: 5px;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+.burgerBtn span:nth-child(1) {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+.burgerBtn span:nth-child(3) {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.header.open .burgerBtn span:nth-child(1) {
+  -webkit-transform: translateY(0) rotate(45deg);
+          transform: translateY(0) rotate(45deg);
+}
+.header.open .burgerBtn span:nth-child(2) {
+  opacity: 0;
+}
+.header.open .burgerBtn span:nth-child(3) {
+  -webkit-transform: translateY(0) rotate(-45deg);
+          transform: translateY(0) rotate(-45deg);
+}
+
+.header {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 90px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  width: 33.3%;
+  text-align: left;
+}
+.logo img {
+  width: 202px;
+}
+
+.menu {
+  width: 33.3%;
+}
+.menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 0;
+}
+.menu ul a {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: Comfortaa, cursive;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.orderButton {
+  width: 33.3%;
+  text-align: right;
+}
+.orderButton a {
+  text-decoration: none;
+  padding: 18px 20px;
+  color: white;
+  font-size: 18px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 16px;
+  background-color: #F62230;
+  border: 1px solid #F62230;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.orderButton a:hover {
+  background-color: transparent;
+  color: #F62230;
+}
+
+.orderForm {
+  background: url(../img/formPage/bg.png) center center no-repeat;
+  background-size: cover;
+  padding-bottom: 234px;
+}
+
+.orderFormBlock {
+  background: white;
+  -webkit-box-shadow: 7px 10px 31px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 7px 10px 31px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 94px;
+}
+
+.phoneOrder {
+  background: url(../img/formPage/bgPhone.png) center center no-repeat;
+  background-size: cover;
+  padding-top: 61px;
+  padding-left: 31px;
+  padding-bottom: 480px;
+}
+.phoneOrder h2 {
+  color: #F62230;
+  font-family: Marck Script, cursive;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+.phoneOrder h1 {
+  margin-top: 31px;
+  color: white;
+  font-family: Comfortaa, cursive;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40.5px;
+}
+.phoneOrder .phoneOrderLine {
+  width: 63px;
+  height: 3px;
+  background-color: #F62230;
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+.phoneOrder img {
+  width: 24px;
+  height: 24px;
+}
+.phoneOrder a {
+  color: white;
+  font-family: Comfortaa, cursive;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.onlineOrder {
+  padding-top: 61px;
+  padding-right: 30px;
+  padding-bottom: 53px;
+}
+.onlineOrder h2 {
+  color: #F62230;
+  font-family: Marck Script, cursive;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+.onlineOrder h1 {
+  width: 70%;
+  margin-top: 31px;
+  color: #2A2A2A;
+  font-family: Comfortaa, cursive;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40.5px;
+}
+
+.labelForm {
+  margin-top: 10px;
+  color: #2A2A2A;
+  font-family: Comfortaa, cursive;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px;
+}
+
+.inputForm, #event {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  height: 52px;
+  background: rgba(246, 34, 48, 0.29);
+  border: none;
+}
+.inputForm:focus, #event:focus {
+  outline: none;
+}
+
+#event {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.eventList {
+  position: relative;
+}
+
+.selectArrow {
+  position: absolute;
+  right: 15px;
+  top: 60%;
+  pointer-events: none;
+}
+
+.buttonForm {
+  margin-top: 44px;
+  width: 100%;
+  padding: 18px 20px;
+  color: white;
+  font-size: 18px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 16px;
+  background-color: #F62230;
+  border: 1px solid #F62230;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.buttonForm:hover {
+  background-color: transparent;
+  color: #F62230;
+}
+
+.footer {
+  background: url(../img/footer/bg.png) center center no-repeat;
+  background-size: cover;
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+
+.contactsFooter h1, .openingHours h1 {
+  color: white;
+  font-size: 28px;
+  font-family: Comfortaa, cursive;
+  font-weight: 700;
+  line-height: 57.5px;
+}
+
+.placeContactsFooter, .openingHoursItem {
+  margin-bottom: 15px;
+}
+.placeContactsFooter img, .openingHoursItem img {
+  height: 22px;
+  width: 22px;
+}
+.placeContactsFooter p, .openingHoursItem p {
+  display: inline-block;
+  margin-bottom: 0;
+  color: white;
+  font-size: 16px;
+  font-family: Comfortaa, cursive;
+  line-height: 24px;
+}
+
+.emailContactsFooter, .phoneContactsFooter {
+  margin-bottom: 15px;
+}
+.emailContactsFooter img, .phoneContactsFooter img {
+  height: 22px;
+  width: 22px;
+}
+.emailContactsFooter a, .phoneContactsFooter a {
+  display: inline-block;
+  color: white;
+  font-size: 16px;
+  font-family: Comfortaa, cursive;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.footerBlock {
+  margin-top: -200px;
+  width: 130%;
+  text-align: center;
+  background-color: #F62230;
+  padding-top: 33px;
+  padding-bottom: 60px;
+}
+.footerBlock img {
+  width: 207px;
+  height: 46px;
+}
+.footerBlock p {
+  margin-top: 48px;
+  margin-bottom: 25px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-family: Comfortaa, cursive;
+  line-height: 24px;
+}
+.footerBlock .footerblockLine {
+  background-color: white;
+  height: 1px;
+  width: 95px;
+  display: inline-block;
+  margin-bottom: 35px;
+}
+.footerBlock .footerBlockSocial {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+.footerBlock .footerBlockSocial img:nth-child(1) {
+  width: 24px;
+  height: 24px;
+}
+.footerBlock .footerBlockSocial img:nth-child(2) {
+  width: 22px;
+  height: 24px;
+}
+.footerBlock .footerBlockSocial img:nth-child(3) {
+  width: 22px;
+  height: 24px;
+}
+
+@media (max-width: 1399.5px) {
+  .footerBlock p {
+    width: 90%;
+    margin: 48px auto 25px auto;
+  }
+}
+@media (max-width: 1199.5px) {
+  .logo {
+    width: 30%;
+  }
+  .menu {
+    width: 40%;
+  }
+  .orderButton {
+    width: 30%;
+  }
+}
+@media (max-width: 991.5px) {
+  .burgerBtn {
+    width: 33.3%;
+    display: inline-block;
+    z-index: 11;
+  }
+  .menu {
+    width: 33.3%;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background-color: #2a2a2a;
+    padding: 75px 20px 20px 20px;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    z-index: 10;
+  }
+  .menu ul {
+    display: block;
+    margin-top: 30px;
+  }
+  .menu ul a {
+    display: block;
+    font-size: 21px;
+    padding: 25px 38px;
+  }
+  .header.open .menu {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  .orderButton {
+    width: 33.3%;
+  }
+  .orderButton a {
+    padding: 12px 15px;
+    font-size: 12px;
+    line-height: 13px;
+  }
+  .phoneOrder {
+    padding-bottom: 31px;
+  }
+  .onlineOrder {
+    padding: 61px 30px 53px 30px;
+  }
+  .onlineOrder h2 {
+    color: #F62230;
+    font-family: Marck Script, cursive;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  .onlineOrder h1 {
+    width: 100%;
+    margin-top: 31px;
+    color: #2A2A2A;
+    font-family: Comfortaa, cursive;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40.5px;
+  }
+  .contactsFooter {
+    margin-top: 120px;
+  }
+  .openingHours {
+    margin-top: 120px;
+  }
+  .footerBlock {
+    margin-top: -550px;
+  }
+}
+@media (max-width: 767.5px) {
+  .logo {
+    width: 35%;
+  }
+  .logo img {
+    width: 100%;
+  }
+  .burgerBtn {
+    width: 25%;
+  }
+  .orderButton {
+    width: 40%;
+  }
+  .contactsFooter {
+    margin-top: 120px;
+  }
+  .openingHours {
+    margin-top: 0px;
+  }
+  .footerBlock {
+    margin-top: -700px;
+  }
+}
+@media (max-width: 575.5px) {
+  .logo {
+    width: 35%;
+  }
+  .logo img {
+    width: 100%;
+  }
+  .burgerBtn {
+    width: 25%;
+  }
+  .burgerBtn span {
+    margin-left: 15px;
+  }
+  .orderButton {
+    width: 40%;
+  }
+  .orderButton a {
+    padding: 12px 15px;
+    font-size: 12px;
+    line-height: 13px;
+    margin-right: 10px;
+  }
+  .footerBlock {
+    width: 90%;
+    margin: -700px auto 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  .orderButton {
+    width: 40%;
+  }
+  .orderButton a {
+    padding: 8px 12px;
+    font-size: 10px;
+    line-height: 13px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .logo {
+    width: 45%;
+  }
+  .burgerBtn {
+    width: 15%;
+  }
+  .burgerBtn span {
+    margin-left: 0;
+  }
+  .orderButton {
+    width: 35%;
+  }
+  .orderButton a {
+    margin-right: 0;
+  }
+}
